@@ -74,6 +74,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 
 | # | Tema | Tramo del vídeo | Carpeta | Apuntes |
 |:-:|------|-----------------|---------|---------|
+| 01 | Fundamentos del cloud | [0:00:00](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=0s) | [01_fundamentos_cloud](01_fundamentos_cloud/) | [01](apuntes/01-fundamentos-cloud.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -81,9 +82,13 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 
 ## Ruta de Aprendizaje
 
-### 1. Fundamentos del cloud ⏳
+### 1. Fundamentos del cloud ✅
+📺 Apunte 01 · 📁 `01_fundamentos_cloud`
+
 Temas: qué es el cloud computing, modelos de despliegue, IaaS/PaaS/SaaS, modelo de precios,
 infraestructura global, responsabilidad compartida.
+
+Ejercicio: elige la región correcta para una app con datos que deben quedarse en la UE. → `ejercicios_01.py` (4)
 
 ### 2. Cuenta y control del gasto ⏳
 Temas: cuenta root, plan gratuito, presupuestos y alertas, consola y regiones.
