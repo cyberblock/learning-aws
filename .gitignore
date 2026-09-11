@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Credenciales y claves: nunca al repositorio
+*.pem
+*.ppk
+.env
+.aws/
+
+# Artefactos de los scripts de la CLI
+*.zip
+respuesta-lambda.json
+costes-*.csv
+!09_costes/costes-ejemplo.csv
