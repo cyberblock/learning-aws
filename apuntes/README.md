@@ -25,6 +25,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 03 | [Seguridad e IAM](03-seguridad-iam.md) | 14:04 |
 
+### Módulo D · Computación
+| # | Tema | Duración |
+|---|------|----------|
+| 04 | [Computación: EC2, EBS y EFS](04-ec2-ebs-efs.md) | 40:24 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -46,6 +51,15 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Evaluación | Todo denegado por defecto · un `Deny` explícito gana a cualquier `Allow` |
 | Mínimo privilegio | Solo los permisos necesarios. `AdministratorAccess` no es para el día a día |
 | Alias de cuenta | `https://<alias>.signin.aws.amazon.com/console`. Único en todo AWS, uno por cuenta |
+| EC2 | Máquinas virtuales de alquiler. Servicio **regional** |
+| AMI | La plantilla del disco. `t2.micro` es el tipo de la capa gratuita |
+| User data | Script de arranque. Se ejecuta **una vez**, como root |
+| Stop + start | La **IP pública cambia**. Un *reboot* la conserva |
+| EBS | Disco de red. **Una** instancia a la vez, atado a **una** zona. Pagas lo aprovisionado |
+| Delete on termination | Volumen raíz: **sí** por defecto · volúmenes añadidos: **no** |
+| Instance Store | Disco físico del servidor: rapidísimo y **efímero** |
+| EFS | NFS gestionado: **muchas** instancias Linux y **varias** zonas. Caro, pago por uso |
+| EFS-IA | Hasta un 92 % más barato para lo que no se toca (política de ciclo de vida) |
 
 ### Comandos
 | Comando | Para qué |
@@ -58,3 +72,8 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | `aws iam create-user` / `create-login-profile` | Crear un usuario y su acceso a la consola |
 | `aws iam add-user-to-group` | Meter al usuario en el grupo (así hereda los permisos) |
 | `aws iam create-account-alias` | Alias para la URL de acceso |
+| `aws ec2 run-instances --user-data file://user-data.sh` | Lanzar una instancia con script de arranque |
+| `aws ec2 describe-instances --query ...PublicIpAddress` | Ver la IP pública actual |
+| `aws ec2 create-volume --availability-zone --size` | Crear un volumen EBS en una zona |
+| `aws ec2 attach-volume --volume-id --instance-id --device` | Adjuntarlo a la instancia |
+| `aws efs put-lifecycle-configuration` | Mover a EFS-IA lo que no se usa |

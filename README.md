@@ -77,6 +77,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 | 01 | Fundamentos del cloud | [0:00:00](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=0s) | [01_fundamentos_cloud](01_fundamentos_cloud/) | [01](apuntes/01-fundamentos-cloud.md) |
 | 02 | Primer contacto con AWS | [0:34:12](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=2052s) | [02_primer_contacto](02_primer_contacto/) | [02](apuntes/02-primer-contacto-aws.md) |
 | 03 | Seguridad e IAM | [0:53:05](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=3185s) | [03_iam](03_iam/) | [03](apuntes/03-seguridad-iam.md) |
+| 04 | Computación: EC2, EBS y EFS | [1:07:09](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=4029s) | [04_ec2_ebs_efs](04_ec2_ebs_efs/) | [04](apuntes/04-ec2-ebs-efs.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -107,11 +108,19 @@ y URL de inicio de sesión.
 
 Ejercicio: decide si una política permite una acción concreta (con comodines). → `ejercicios_03.py` (4)
 
-### 4. Computación (EC2) ⏳
-Temas: tipos de instancia, AMI, pares de claves, grupos de seguridad, *user data*, ciclo de vida.
+### 4. Computación (EC2) ✅
+📺 Apunte 04 · 📁 `04_ec2_ebs_efs`
 
-### 5. Almacenamiento de instancias (EBS, Instance Store, EFS) ⏳
-Temas: volúmenes EBS, *delete on termination*, snapshots, EFS y EFS-IA.
+Temas: tipos de instancia, AMI, pares de claves, grupos de seguridad, *user data*, ciclo de vida
+y cambio de IP pública al parar y arrancar.
+
+Ejercicio: decide si un volumen se puede adjuntar a una instancia. → `ejercicios_04.py` (4)
+
+### 5. Almacenamiento de instancias (EBS, Instance Store, EFS) ✅
+📺 Apunte 04 · 📁 `04_ec2_ebs_efs`
+
+Temas: volúmenes EBS y zonas de disponibilidad, *delete on termination*, instantáneas,
+Instance Store efímero, EFS multizona y EFS-IA con política de ciclo de vida.
 
 ### 6. Alta disponibilidad y escalado (ELB + ASG) ⏳
 Temas: escalado vertical y horizontal, elasticidad, tipos de balanceadores, grupos de autoescalado.
