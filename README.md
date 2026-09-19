@@ -80,6 +80,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 | 04 | Computación: EC2, EBS y EFS | [1:07:09](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=4029s) | [04_ec2_ebs_efs](04_ec2_ebs_efs/) | [04](apuntes/04-ec2-ebs-efs.md) |
 | 05 | Alta disponibilidad: ELB y Auto Scaling | [1:47:33](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=6453s) | [05_alta_disponibilidad](05_alta_disponibilidad/) | [05](apuntes/05-alta-disponibilidad.md) |
 | 06 | Almacenamiento de objetos (S3) | [2:27:32](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=8852s) | [06_s3](06_s3/) | [06](apuntes/06-s3.md) |
+| 07 | Bases de datos: RDS, Aurora y DynamoDB | [2:41:29](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=9689s) | [07_bases_datos](07_bases_datos/) | [07](apuntes/07-bases-de-datos.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -141,8 +142,13 @@ versionado, cifrado por defecto y URLs prefirmadas.
 
 Ejercicio: valida nombres de bucket con las reglas de S3. → `ejercicios_06.py` (4)
 
-### 8. Bases de datos (RDS, Aurora, DynamoDB) ⏳
-Temas: relacional vs NoSQL, RDS gestionado, Aurora y Aurora Serverless, DynamoDB y DAX.
+### 8. Bases de datos (RDS, Aurora, DynamoDB) ✅
+📺 Apunte 07 · 📁 `07_bases_datos`
+
+Temas: relacional frente a NoSQL, ventajas de una base de datos gestionada, RDS y sus instantáneas,
+Aurora y Aurora Serverless, DynamoDB con claves y esquema libre, y DAX frente a ElastiCache.
+
+Ejercicio: convierte un diccionario al formato de atributos de DynamoDB. → `ejercicios_07.py` (4)
 
 ### 9. Serverless (Lambda) ⏳
 Temas: serverless, precios de Lambda, eventos, logs en CloudWatch, rol de ejecución.

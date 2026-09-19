@@ -40,6 +40,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 06 | [Almacenamiento de objetos (S3)](06-s3.md) | 13:57 |
 
+### Módulo G · Bases de datos
+| # | Tema | Duración |
+|---|------|----------|
+| 07 | [Bases de datos: RDS, Aurora y DynamoDB](07-bases-de-datos.md) | 37:27 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -83,6 +88,13 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Tamaño | 5 TiB por objeto · multiparte obligatoria a partir de 5 GiB |
 | URL prefirmada | Lleva firma y caduca · la URL pública da `AccessDenied` si el bucket está bloqueado |
 | Publicar de verdad | Quitar el bloqueo público **y** poner política de bucket (mejor: CloudFront) |
+| Relacional vs NoSQL | SQL, esquema fijo y relaciones · JSON, esquema libre y clave-valor |
+| RDS | Relacional gestionada. **Sin SSH**, nunca expuesta a internet |
+| Instantánea de RDS | Compartir con otra cuenta, copiar a otra región, restaurar o exportar a S3 |
+| Aurora | Propia de AWS, compatible MySQL/PostgreSQL. Más rápida, más cara, fuera de capa gratuita |
+| Aurora Serverless | Sin instancias ni capacidad: escala sola y se paga por uso |
+| DynamoDB | NoSQL clave-valor sin servidor, 3 zonas, latencia de milisegundo |
+| DAX | Caché **solo para DynamoDB** (microsegundos) · ElastiCache sirve para las demás |
 
 ### Comandos
 | Comando | Para qué |
@@ -107,3 +119,7 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | `aws s3 mb` / `aws s3 cp` / `aws s3 ls` | Crear bucket, subir objetos y listarlos |
 | `aws s3 presign --expires-in 3600` | URL firmada temporal de un objeto |
 | `aws s3api put-bucket-versioning --versioning-configuration Status=Enabled` | Activar el versionado |
+| `aws rds create-db-instance --no-publicly-accessible` | Crear la base de datos sin acceso público |
+| `aws rds create-db-snapshot` | Instantánea para copiar, compartir o restaurar |
+| `aws dynamodb create-table --key-schema` | Crear la tabla con su clave de partición |
+| `aws dynamodb put-item --item file://item.json` | Insertar un elemento |

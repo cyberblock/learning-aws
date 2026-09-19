@@ -1,0 +1,7 @@
+{
+  "user_id": {"N": "1234"},
+  "nombre": {"S": "Joan"},
+  "apellido": {"S": "Amengual"},
+  "numero_favorito": {"N": "42"},
+  "activo": {"BOOL": true}
+}

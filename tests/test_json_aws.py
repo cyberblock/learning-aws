@@ -24,6 +24,7 @@ ESQUEMAS = {
     ),
     "03_iam/politica-solo-lectura.json": "politica-iam",
     "06_s3/politica-bucket-lectura-publica.json": "politica-iam",
+    "07_bases_datos/item-usuario.json": ("dynamodb", "PutItem", "Item"),
 }
 
 sesion = botocore.session.get_session()
