@@ -15,6 +15,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 01 | [Fundamentos del cloud](01-fundamentos-cloud.md) | 34:12 |
 
+### Módulo B · Primer contacto
+| # | Tema | Duración |
+|---|------|----------|
+| 02 | [Primer contacto con AWS](02-primer-contacto-aws.md) | 18:53 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -26,3 +31,15 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Elegir región | Legal → latencia → servicios disponibles → precio |
 | Servicios globales | IAM, Route 53, CloudFront, WAF (con CloudFront) |
 | Responsabilidad compartida | AWS: seguridad **del** cloud · Cliente: seguridad **en** el cloud |
+| Usuario root | El del registro. No se usa para el día a día: crea un usuario IAM |
+| Presupuesto | AWS Budgets, servicio global. Alerta por correo antes de gastar de más |
+| Coste real vs previsto | `ACTUAL` = ya gastado · `FORECASTED` = previsión de fin de mes |
+| Región en la consola | Selector arriba a la derecha. Si cambias de región, no ves los recursos de la otra |
+
+### Comandos
+| Comando | Para qué |
+|---------|----------|
+| `aws sts get-caller-identity` | Con qué identidad estás trabajando (y el ID de cuenta) |
+| `aws budgets create-budget` | Crear el presupuesto y sus alertas |
+| `aws ec2 describe-regions` | Listar las regiones disponibles |
+| `aws ec2 describe-availability-zones --region us-east-1` | Listar las zonas de una región |

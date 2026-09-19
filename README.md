@@ -75,6 +75,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 | # | Tema | Tramo del vídeo | Carpeta | Apuntes |
 |:-:|------|-----------------|---------|---------|
 | 01 | Fundamentos del cloud | [0:00:00](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=0s) | [01_fundamentos_cloud](01_fundamentos_cloud/) | [01](apuntes/01-fundamentos-cloud.md) |
+| 02 | Primer contacto con AWS | [0:34:12](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=2052s) | [02_primer_contacto](02_primer_contacto/) | [02](apuntes/02-primer-contacto-aws.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -90,8 +91,12 @@ infraestructura global, responsabilidad compartida.
 
 Ejercicio: elige la región correcta para una app con datos que deben quedarse en la UE. → `ejercicios_01.py` (4)
 
-### 2. Cuenta y control del gasto ⏳
-Temas: cuenta root, plan gratuito, presupuestos y alertas, consola y regiones.
+### 2. Cuenta y control del gasto ✅
+📺 Apunte 02 · 📁 `02_primer_contacto`
+
+Temas: cuenta root, plan gratuito, presupuestos y alertas por correo, tour por la consola y selector de región.
+
+Ejercicio: construye el JSON de un presupuesto mensual con alerta al 50 %. → `ejercicios_02.py` (4)
 
 ### 3. Identidad y acceso (IAM) ⏳
 Temas: usuarios, grupos, políticas JSON, mínimo privilegio, alias de cuenta.
@@ -145,12 +150,14 @@ Temas: guía oficial del examen, preguntas de práctica, repaso de las notas de 
 - Calculadora de precios: https://calculator.aws/
 - Servicios disponibles por región: https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/
 - Referencia de la AWS CLI: https://awscli.amazonaws.com/v2/documentation/api/latest/index.html
+- Código del curso publicado por el autor: https://github.com/joaneeet7/codigo-aws-cloud-practitioner
 
 ## Créditos
 - **Autor del curso:** Joan Amengual, ingeniero cloud e instructor de cloud y DevOps.
 - **Canal:** https://www.youtube.com/channel/UCQB8dgeFkuKXVtzweRM_Zfw
 - **Vídeo original:** [Curso Completo de AWS (Amazon Web Services) | Desde CERO en ESPAÑOL!](https://www.youtube.com/watch?v=NxhLT4ehhOw)
   (3:50:13, publicado el 16/04/2026). En la descripción del vídeo el autor enlaza sus recursos gratuitos.
+- **Código del curso del autor:** https://github.com/joaneeet7/codigo-aws-cloud-practitioner (no se copia aquí; se enlaza).
 
 Los apuntes, los scripts de la CLI y los ejercicios son material propio basado en ese curso. Todo el mérito
 del contenido original es de su autor. Este repositorio no incluye el vídeo, su transcripción ni los

@@ -59,6 +59,8 @@ def casos():
 
 @pytest.mark.parametrize("servicio,operacion,opciones", list(casos()))
 def test_comando_aws_valido(servicio, operacion, opciones):
+    if servicio == "configure":  # comando propio de la CLI (aws configure get/set/sso...)
+        return
     if servicio == "s3":
         assert operacion in S3_ALTO_NIVEL, f"`aws s3 {operacion}` no existe"
         return

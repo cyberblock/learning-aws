@@ -16,6 +16,12 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # ruta -> (servicio, operación, miembro de la entrada) | "politica-iam" | "libre"
 ESQUEMAS = {
+    "02_primer_contacto/presupuesto.json": ("budgets", "CreateBudget", "Budget"),
+    "02_primer_contacto/notificaciones.json": (
+        "budgets",
+        "CreateBudget",
+        "NotificationsWithSubscribers",
+    ),
 }
 
 sesion = botocore.session.get_session()
