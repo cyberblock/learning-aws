@@ -50,6 +50,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 08 | [Serverless: AWS Lambda](08-serverless-lambda.md) | 17:01 |
 
+### Módulo I · Costes
+| # | Tema | Duración |
+|---|------|----------|
+| 09 | [Costes y facturación](09-costes-facturacion.md) | 14:16 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -106,6 +111,10 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Límites de Lambda | Hasta 10 GB de RAM y **15 minutos** de ejecución (3 s por defecto) |
 | Rol de ejecución | Política de confianza (quién lo asume) + políticas de permisos (qué puede hacer) |
 | Fallos de Lambda | Mirar siempre `/aws/lambda/<función>` en CloudWatch Logs |
+| Etiquetas de coste | `user:` las tuyas · `aws:` las automáticas. Hay que **activarlas** |
+| Cost Explorer | Analizar, filtrar y prever hasta 12 meses. La herramienta del día a día |
+| Informe de costes y uso | El dato en bruto a S3, para Athena, Redshift o QuickSight |
+| Avisar a tiempo | Presupuestos (apunte 02); los informes llegan con horas de retraso |
 
 ### Comandos
 | Comando | Para qué |
@@ -137,3 +146,6 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | `aws lambda create-function --handler --runtime --zip-file` | Desplegar la función |
 | `aws lambda invoke --payload` | Invocarla como el botón "Probar" |
 | `aws lambda update-function-code --zip-file` | El "Deploy" tras cambiar el código |
+| `aws ce get-cost-and-usage --group-by Type=DIMENSION,Key=SERVICE` | Gasto por servicio |
+| `aws ce get-cost-forecast` | Previsión de gasto |
+| `aws resourcegroupstaggingapi get-resources --tag-filters` | Buscar recursos por etiqueta |

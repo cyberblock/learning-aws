@@ -82,6 +82,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 | 06 | Almacenamiento de objetos (S3) | [2:27:32](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=8852s) | [06_s3](06_s3/) | [06](apuntes/06-s3.md) |
 | 07 | Bases de datos: RDS, Aurora y DynamoDB | [2:41:29](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=9689s) | [07_bases_datos](07_bases_datos/) | [07](apuntes/07-bases-de-datos.md) |
 | 08 | Serverless: AWS Lambda | [3:18:56](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=11936s) | [08_serverless](08_serverless/) | [08](apuntes/08-serverless-lambda.md) |
+| 09 | Costes y facturación | [3:35:57](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=12957s) | [09_costes](09_costes/) | [09](apuntes/09-costes-facturacion.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -159,8 +160,13 @@ eventos y desencadenadores, registros en CloudWatch y rol de ejecución.
 
 Ejercicio: calcula el coste mensual de una función con la capa gratuita. → `ejercicios_08.py` (4)
 
-### 10. Costes y facturación ⏳
-Temas: panel de facturación, etiquetas de asignación de costes, grupos de recursos, Cost Explorer.
+### 10. Costes y facturación ✅
+📺 Apunte 09 · 📁 `09_costes`
+
+Temas: panel de facturación, etiquetas de asignación de costes y editor de etiquetas, grupos de
+recursos, informe de costes y uso, y Cost Explorer con filtros y previsión.
+
+Ejercicio: estima el gasto a fin de mes con el ritmo actual. → `ejercicios_09.py` (4)
 
 ### 11. Redes (VPC) ⏳
 Temas: VPC, subredes públicas y privadas, tablas de rutas, Internet Gateway, NAT, *security groups* vs NACL.

@@ -1,0 +1,11 @@
+fecha,servicio,etiqueta,coste_usd
+2026-04-01,Amazon Route 53,user:department$IT,0.50
+2026-04-01,Amazon EC2,user:department$IT,3.20
+2026-04-01,Elastic Load Balancing,user:department$IT,0.60
+2026-04-02,Amazon EC2,user:department$Ventas,4.10
+2026-04-02,Amazon S3,user:department$IT,0.15
+2026-04-02,Amazon RDS,user:department$Ventas,2.75
+2026-04-03,Amazon EC2,user:department$IT,3.30
+2026-04-03,AWS Lambda,aws:createdBy$IAMUser,0.00
+2026-04-03,Amazon S3,user:department$Ventas,0.20
+2026-04-04,Elastic Load Balancing,user:department$Ventas,0.60
