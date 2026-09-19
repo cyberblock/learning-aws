@@ -81,6 +81,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 | 05 | Alta disponibilidad: ELB y Auto Scaling | [1:47:33](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=6453s) | [05_alta_disponibilidad](05_alta_disponibilidad/) | [05](apuntes/05-alta-disponibilidad.md) |
 | 06 | Almacenamiento de objetos (S3) | [2:27:32](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=8852s) | [06_s3](06_s3/) | [06](apuntes/06-s3.md) |
 | 07 | Bases de datos: RDS, Aurora y DynamoDB | [2:41:29](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=9689s) | [07_bases_datos](07_bases_datos/) | [07](apuntes/07-bases-de-datos.md) |
+| 08 | Serverless: AWS Lambda | [3:18:56](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=11936s) | [08_serverless](08_serverless/) | [08](apuntes/08-serverless-lambda.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -150,8 +151,13 @@ Aurora y Aurora Serverless, DynamoDB con claves y esquema libre, y DAX frente a 
 
 Ejercicio: convierte un diccionario al formato de atributos de DynamoDB. → `ejercicios_07.py` (4)
 
-### 9. Serverless (Lambda) ⏳
-Temas: serverless, precios de Lambda, eventos, logs en CloudWatch, rol de ejecución.
+### 9. Serverless (Lambda) ✅
+📺 Apunte 08 · 📁 `08_serverless`
+
+Temas: qué es serverless, Lambda frente a EC2, precio por solicitud y por GB-segundo,
+eventos y desencadenadores, registros en CloudWatch y rol de ejecución.
+
+Ejercicio: calcula el coste mensual de una función con la capa gratuita. → `ejercicios_08.py` (4)
 
 ### 10. Costes y facturación ⏳
 Temas: panel de facturación, etiquetas de asignación de costes, grupos de recursos, Cost Explorer.

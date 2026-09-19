@@ -45,6 +45,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 07 | [Bases de datos: RDS, Aurora y DynamoDB](07-bases-de-datos.md) | 37:27 |
 
+### Módulo H · Serverless
+| # | Tema | Duración |
+|---|------|----------|
+| 08 | [Serverless: AWS Lambda](08-serverless-lambda.md) | 17:01 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -95,6 +100,12 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Aurora Serverless | Sin instancias ni capacidad: escala sola y se paga por uso |
 | DynamoDB | NoSQL clave-valor sin servidor, 3 zonas, latencia de milisegundo |
 | DAX | Caché **solo para DynamoDB** (microsegundos) · ElastiCache sirve para las demás |
+| Serverless | Los servidores existen; **tú no los gestionas**. En el examen: Lambda |
+| Precio de Lambda | Por **solicitud** y por **GB-segundo** (memoria × tiempo) |
+| Capa gratuita de Lambda | 1 millón de solicitudes y 400 000 GB-segundo al mes |
+| Límites de Lambda | Hasta 10 GB de RAM y **15 minutos** de ejecución (3 s por defecto) |
+| Rol de ejecución | Política de confianza (quién lo asume) + políticas de permisos (qué puede hacer) |
+| Fallos de Lambda | Mirar siempre `/aws/lambda/<función>` en CloudWatch Logs |
 
 ### Comandos
 | Comando | Para qué |
@@ -123,3 +134,6 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | `aws rds create-db-snapshot` | Instantánea para copiar, compartir o restaurar |
 | `aws dynamodb create-table --key-schema` | Crear la tabla con su clave de partición |
 | `aws dynamodb put-item --item file://item.json` | Insertar un elemento |
+| `aws lambda create-function --handler --runtime --zip-file` | Desplegar la función |
+| `aws lambda invoke --payload` | Invocarla como el botón "Probar" |
+| `aws lambda update-function-code --zip-file` | El "Deploy" tras cambiar el código |
