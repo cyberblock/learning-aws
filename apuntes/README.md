@@ -30,6 +30,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 04 | [Computación: EC2, EBS y EFS](04-ec2-ebs-efs.md) | 40:24 |
 
+### Módulo E · Alta disponibilidad
+| # | Tema | Duración |
+|---|------|----------|
+| 05 | [Alta disponibilidad: ELB y Auto Scaling](05-alta-disponibilidad.md) | 39:59 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -60,6 +65,14 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Instance Store | Disco físico del servidor: rapidísimo y **efímero** |
 | EFS | NFS gestionado: **muchas** instancias Linux y **varias** zonas. Caro, pago por uso |
 | EFS-IA | Hasta un 92 % más barato para lo que no se toca (política de ciclo de vida) |
+| Escalado vertical | Instancia más grande. Tiene techo de hardware |
+| Escalado horizontal | Más instancias. Es lo que usan ASG y ELB |
+| Alta disponibilidad | Lo mismo en **≥ 2 zonas** de disponibilidad |
+| Elasticidad vs agilidad | Elasticidad = escalar solo · agilidad = recursos en minutos (distractor) |
+| ALB / NLB / GWLB | Capa 7 HTTP · capa 4 TCP-UDP con IP fija · capa 3 para cortafuegos de terceros |
+| Grupo de destino | A quién manda el ALB y cómo comprueba su salud (`healthy` / `unhealthy`) |
+| ASG | Mínimo, capacidad deseada y máximo. Repone lo que muere |
+| Orden de limpieza | ASG → balanceador → grupo de destino → instancias |
 
 ### Comandos
 | Comando | Para qué |
@@ -77,3 +90,7 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | `aws ec2 create-volume --availability-zone --size` | Crear un volumen EBS en una zona |
 | `aws ec2 attach-volume --volume-id --instance-id --device` | Adjuntarlo a la instancia |
 | `aws efs put-lifecycle-configuration` | Mover a EFS-IA lo que no se usa |
+| `aws elbv2 create-load-balancer --type application` | Crear un ALB |
+| `aws elbv2 describe-target-health` | Ver qué destinos están sanos |
+| `aws autoscaling create-auto-scaling-group --min-size --max-size` | Crear el grupo de autoescalado |
+| `aws autoscaling delete-auto-scaling-group --force-delete` | Borrarlo antes que nada |

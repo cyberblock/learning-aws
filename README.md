@@ -78,6 +78,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 | 02 | Primer contacto con AWS | [0:34:12](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=2052s) | [02_primer_contacto](02_primer_contacto/) | [02](apuntes/02-primer-contacto-aws.md) |
 | 03 | Seguridad e IAM | [0:53:05](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=3185s) | [03_iam](03_iam/) | [03](apuntes/03-seguridad-iam.md) |
 | 04 | Computación: EC2, EBS y EFS | [1:07:09](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=4029s) | [04_ec2_ebs_efs](04_ec2_ebs_efs/) | [04](apuntes/04-ec2-ebs-efs.md) |
+| 05 | Alta disponibilidad: ELB y Auto Scaling | [1:47:33](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=6453s) | [05_alta_disponibilidad](05_alta_disponibilidad/) | [05](apuntes/05-alta-disponibilidad.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -122,8 +123,14 @@ Ejercicio: decide si un volumen se puede adjuntar a una instancia. → `ejercici
 Temas: volúmenes EBS y zonas de disponibilidad, *delete on termination*, instantáneas,
 Instance Store efímero, EFS multizona y EFS-IA con política de ciclo de vida.
 
-### 6. Alta disponibilidad y escalado (ELB + ASG) ⏳
-Temas: escalado vertical y horizontal, elasticidad, tipos de balanceadores, grupos de autoescalado.
+### 6. Alta disponibilidad y escalado (ELB + ASG) ✅
+📺 Apunte 05 · 📁 `05_alta_disponibilidad`
+
+Temas: escalado vertical y horizontal, elasticidad frente a agilidad, tipos de balanceadores
+(ALB, NLB, GWLB), grupos de destino y comprobaciones de estado, grupos de autoescalado y
+orden de limpieza de los recursos.
+
+Ejercicio: reparte peticiones por turnos entre los destinos sanos. → `ejercicios_05.py` (4)
 
 ### 7. Almacenamiento de objetos (S3) ⏳
 Temas: buckets, objetos y claves, acceso público, URLs prefirmadas.
