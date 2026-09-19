@@ -22,6 +22,7 @@ ESQUEMAS = {
         "CreateBudget",
         "NotificationsWithSubscribers",
     ),
+    "03_iam/politica-solo-lectura.json": "politica-iam",
 }
 
 sesion = botocore.session.get_session()

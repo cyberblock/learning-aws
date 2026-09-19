@@ -76,6 +76,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 |:-:|------|-----------------|---------|---------|
 | 01 | Fundamentos del cloud | [0:00:00](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=0s) | [01_fundamentos_cloud](01_fundamentos_cloud/) | [01](apuntes/01-fundamentos-cloud.md) |
 | 02 | Primer contacto con AWS | [0:34:12](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=2052s) | [02_primer_contacto](02_primer_contacto/) | [02](apuntes/02-primer-contacto-aws.md) |
+| 03 | Seguridad e IAM | [0:53:05](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=3185s) | [03_iam](03_iam/) | [03](apuntes/03-seguridad-iam.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -98,8 +99,13 @@ Temas: cuenta root, plan gratuito, presupuestos y alertas por correo, tour por l
 
 Ejercicio: construye el JSON de un presupuesto mensual con alerta al 50 %. → `ejercicios_02.py` (4)
 
-### 3. Identidad y acceso (IAM) ⏳
-Temas: usuarios, grupos, políticas JSON, mínimo privilegio, alias de cuenta.
+### 3. Identidad y acceso (IAM) ✅
+📺 Apunte 03 · 📁 `03_iam`
+
+Temas: usuario root frente a usuario IAM, grupos, políticas JSON, mínimo privilegio, alias de cuenta
+y URL de inicio de sesión.
+
+Ejercicio: decide si una política permite una acción concreta (con comodines). → `ejercicios_03.py` (4)
 
 ### 4. Computación (EC2) ⏳
 Temas: tipos de instancia, AMI, pares de claves, grupos de seguridad, *user data*, ciclo de vida.

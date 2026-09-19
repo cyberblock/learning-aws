@@ -20,6 +20,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 02 | [Primer contacto con AWS](02-primer-contacto-aws.md) | 18:53 |
 
+### Módulo C · Seguridad
+| # | Tema | Duración |
+|---|------|----------|
+| 03 | [Seguridad e IAM](03-seguridad-iam.md) | 14:04 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -35,6 +40,12 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Presupuesto | AWS Budgets, servicio global. Alerta por correo antes de gastar de más |
 | Coste real vs previsto | `ACTUAL` = ya gastado · `FORECASTED` = previsión de fin de mes |
 | Región en la consola | Selector arriba a la derecha. Si cambias de región, no ves los recursos de la otra |
+| IAM | Servicio **global**: quién puede hacer qué. Usuarios, grupos, políticas JSON |
+| Grupos | Solo contienen usuarios, nunca otros grupos. Un usuario puede estar en varios |
+| Política | `Version` (siempre `2012-10-17`) + `Statement` con `Effect`, `Action`, `Resource` |
+| Evaluación | Todo denegado por defecto · un `Deny` explícito gana a cualquier `Allow` |
+| Mínimo privilegio | Solo los permisos necesarios. `AdministratorAccess` no es para el día a día |
+| Alias de cuenta | `https://<alias>.signin.aws.amazon.com/console`. Único en todo AWS, uno por cuenta |
 
 ### Comandos
 | Comando | Para qué |
@@ -43,3 +54,7 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | `aws budgets create-budget` | Crear el presupuesto y sus alertas |
 | `aws ec2 describe-regions` | Listar las regiones disponibles |
 | `aws ec2 describe-availability-zones --region us-east-1` | Listar las zonas de una región |
+| `aws iam create-group` / `attach-group-policy` | Crear un grupo y darle permisos |
+| `aws iam create-user` / `create-login-profile` | Crear un usuario y su acceso a la consola |
+| `aws iam add-user-to-group` | Meter al usuario en el grupo (así hereda los permisos) |
+| `aws iam create-account-alias` | Alias para la URL de acceso |
