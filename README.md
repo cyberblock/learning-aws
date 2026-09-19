@@ -1,5 +1,7 @@
 # AWS desde cero (Guía de Aprendizaje)
 
+![AWS Learning Path](AWS-Learning.jpg)
+
 Ruta para aprender Amazon Web Services apoyándote en el vídeo
 [Curso Completo de AWS (Amazon Web Services) | Desde CERO en ESPAÑOL!](https://www.youtube.com/watch?v=NxhLT4ehhOw)
 de **Joan Amengual** ([canal de YouTube](https://www.youtube.com/channel/UCQB8dgeFkuKXVtzweRM_Zfw)).
