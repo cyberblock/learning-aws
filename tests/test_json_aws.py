@@ -23,6 +23,7 @@ ESQUEMAS = {
         "NotificationsWithSubscribers",
     ),
     "03_iam/politica-solo-lectura.json": "politica-iam",
+    "06_s3/politica-bucket-lectura-publica.json": "politica-iam",
 }
 
 sesion = botocore.session.get_session()

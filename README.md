@@ -79,6 +79,7 @@ pytest 04_ec2_ebs_efs --mios    # comprueba TU versión de ejercicios_04.py
 | 03 | Seguridad e IAM | [0:53:05](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=3185s) | [03_iam](03_iam/) | [03](apuntes/03-seguridad-iam.md) |
 | 04 | Computación: EC2, EBS y EFS | [1:07:09](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=4029s) | [04_ec2_ebs_efs](04_ec2_ebs_efs/) | [04](apuntes/04-ec2-ebs-efs.md) |
 | 05 | Alta disponibilidad: ELB y Auto Scaling | [1:47:33](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=6453s) | [05_alta_disponibilidad](05_alta_disponibilidad/) | [05](apuntes/05-alta-disponibilidad.md) |
+| 06 | Almacenamiento de objetos (S3) | [2:27:32](https://www.youtube.com/watch?v=NxhLT4ehhOw&t=8852s) | [06_s3](06_s3/) | [06](apuntes/06-s3.md) |
 
 **Leyenda de la ruta:** ✅ cubierto en el curso · 🟡 cubierto en parte · ⏳ pendiente (no está en el vídeo)
 
@@ -132,8 +133,13 @@ orden de limpieza de los recursos.
 
 Ejercicio: reparte peticiones por turnos entre los destinos sanos. → `ejercicios_05.py` (4)
 
-### 7. Almacenamiento de objetos (S3) ⏳
-Temas: buckets, objetos y claves, acceso público, URLs prefirmadas.
+### 7. Almacenamiento de objetos (S3) ✅
+📺 Apunte 06 · 📁 `06_s3`
+
+Temas: buckets y reglas de nombres, objetos, claves y prefijos, bloqueo de acceso público,
+versionado, cifrado por defecto y URLs prefirmadas.
+
+Ejercicio: valida nombres de bucket con las reglas de S3. → `ejercicios_06.py` (4)
 
 ### 8. Bases de datos (RDS, Aurora, DynamoDB) ⏳
 Temas: relacional vs NoSQL, RDS gestionado, Aurora y Aurora Serverless, DynamoDB y DAX.

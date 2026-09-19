@@ -35,6 +35,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 |---|------|----------|
 | 05 | [Alta disponibilidad: ELB y Auto Scaling](05-alta-disponibilidad.md) | 39:59 |
 
+### Módulo F · Almacenamiento
+| # | Tema | Duración |
+|---|------|----------|
+| 06 | [Almacenamiento de objetos (S3)](06-s3.md) | 13:57 |
+
 ## Chuleta rápida
 
 ### Conceptos
@@ -73,6 +78,11 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | Grupo de destino | A quién manda el ALB y cómo comprueba su salud (`healthy` / `unhealthy`) |
 | ASG | Mínimo, capacidad deseada y máximo. Repone lo que muere |
 | Orden de limpieza | ASG → balanceador → grupo de destino → instancias |
+| S3 | Objetos dentro de buckets. Bucket **regional**, nombre **único en todo AWS** |
+| Clave | `prefijo + nombre`. **No hay carpetas**, solo claves con barras |
+| Tamaño | 5 TiB por objeto · multiparte obligatoria a partir de 5 GiB |
+| URL prefirmada | Lleva firma y caduca · la URL pública da `AccessDenied` si el bucket está bloqueado |
+| Publicar de verdad | Quitar el bloqueo público **y** poner política de bucket (mejor: CloudFront) |
 
 ### Comandos
 | Comando | Para qué |
@@ -94,3 +104,6 @@ Son resúmenes con explicaciones propias. Para la explicación completa, mira el
 | `aws elbv2 describe-target-health` | Ver qué destinos están sanos |
 | `aws autoscaling create-auto-scaling-group --min-size --max-size` | Crear el grupo de autoescalado |
 | `aws autoscaling delete-auto-scaling-group --force-delete` | Borrarlo antes que nada |
+| `aws s3 mb` / `aws s3 cp` / `aws s3 ls` | Crear bucket, subir objetos y listarlos |
+| `aws s3 presign --expires-in 3600` | URL firmada temporal de un objeto |
+| `aws s3api put-bucket-versioning --versioning-configuration Status=Enabled` | Activar el versionado |
